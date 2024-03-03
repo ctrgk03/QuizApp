@@ -13,9 +13,7 @@ protocol QuizAppService {
 
 final class MockQuizAppService: QuizAppService {
     func fetchQuestions(completion: @escaping QuizAppServiceCompletion) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            completion(self.successResult())
-        }
+        completion(successResult())
     }
 
     private func successResult() -> QuizAppServiceResult {

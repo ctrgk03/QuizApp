@@ -2,16 +2,21 @@ import UIKit
 
 final class GameFlowController {
 
-    private var navigationController: UINavigationController!
+    private let navigationController: UINavigationController
     private var engine: GameEngine!
     private let service: QuizAppService
 
-    init(service: QuizAppService = MockQuizAppService()) {
+    init(
+        service: QuizAppService = MockQuizAppService(),
+        navigationController: UINavigationController
+    ) {
         self.service = service
+        self.navigationController = navigationController
     }
 
-    func start(_ window: UIWindow?) {
-        routeToStartingPage(window)
+    func start() {
+        let controller = StartingPageViewController()
+        navigationController.setViewControllers([controller], animated: false)
     }
 
     func startQuiz() {
@@ -21,6 +26,7 @@ final class GameFlowController {
             switch result {
                 case .success(let questionsResponse):
                     self?.engine = .init(questions: questionsResponse.questions)
+                    self?.routeToNextQuestionPage()
                 case .failure(let error):
                     self?.navigationController.showAlert(
                         title: "Hata",
@@ -30,9 +36,8 @@ final class GameFlowController {
         }
     }
 
-    private func routeToStartingPage(_ window: UIWindow?) {
-        let controller = StartingPageViewController()
-        navigationController = .init(rootViewController: controller)
-        window?.rootViewController = navigationController
+    private func routeToNextQuestionPage() {
+        let questionViewController = QuestionViewController()
+        navigationController.setViewControllers([questionViewController], animated: true)
     }
 }

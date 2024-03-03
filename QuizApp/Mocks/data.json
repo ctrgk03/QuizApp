@@ -1,0 +1,93 @@
+{
+    "questions": [
+      {
+        "question": "Dünyanın 7 Harikası’ndan biri olan İskenderiye Feneri nerede bulunur?",
+        "answers": {
+          "A": "Libya",
+          "B": "Yemen",
+          "C": "Sudan",
+          "D": "Mısır"
+        },
+        "questionImageUrl": null,
+        "correctAnswer": "D",
+        "score": 200
+      },
+      {
+        "question": "Dünyaca ünlü bir tablo olan Çığlık kimin eseri?",
+        "answers": {
+          "A": "Edward Munch",
+          "B": "Vincent Van Gogh",
+          "C": "Leonardo Da Vinci",
+          "D": "Pablo Picasso"
+        },
+        "questionImageUrl": "https://images.boboscope.com/53c7eba1-67cb-43ef-9b27-9b6dfccde338?alt=media&token=82b0898b-297c-4406-8ebe-6e1edcc5fe4d&tr=w-1100,c-at_max,f-auto",
+        "correctAnswer": "A",
+        "score": 100
+      },
+      {
+        "question": "Jose Arcadio Buendia hangi romanın kahramanıdır?",
+        "answers": {
+          "A": "Yüzyıllık Yalnızlık",
+          "B": "Kırmızı Pazartesi"
+        },
+        "questionImageUrl": "null",
+        "correctAnswer": "A",
+        "score": 50
+      },
+      {
+        "question": "Atatürk'ün nüfusa kayıtlı olduğu il neresidir??",
+        "answers": {
+          "A": "İstanbul",
+          "B": "Ankara",
+          "C": "Sivas",
+          "D": "Gaziantep"
+        },
+        "questionImageUrl": "https://images.boboscope.com/a7300bcc-621b-4bce-a7af-c416d1afe8ad?alt=media&token=8608222f-ef22-4cad-8219-8d570c9954e7&tr=w-1100,c-at_max,f-auto",
+        "correctAnswer": "D",
+        "score": 200
+      },
+      {
+        "question": "Kingston nerenin başkentidir?",
+        "answers": {
+          "A": "Jamaika",
+          "B": "Küba",
+          "C": "Belize",
+          "D": "Bahamalar"
+        },
+        "correctAnswer": "A",
+        "score": 100
+      },
+      {
+        "question": "Hangisi geminin bölümlerinden biri değildir?",
+        "answers": {
+          "A": "Ambar",
+          "B": "Pervane",
+          "C": "Üst",
+          "D": "Salon"
+        },
+        "correctAnswer": "D",
+        "score": 50
+      },
+      {
+        "question": "Hangi tarihte Güney Yarım Küre'de en uzun gündüz yaşanır?",
+        "answers": {
+          "A": "21 Mart",
+          "B": "21 Aralık"
+        },
+        "correctAnswer": "B",
+        "score": 50
+      },
+      {
+        "question": "Dünya bir ülke olsaydı başkenti İstanbul olurdu sözünü kim söylemiştir?",
+        "answers": {
+          "A": "Napolyon",
+          "B": "Jean-Jacques Rousseau",
+          "C": "Voltaire",
+          "D": "Winston Churchill"
+        },
+        "questionImageUrl": "https://images.boboscope.com/46392ded-d475-4a93-a411-27819425201c?alt=media&token=c9c7a3b2-9908-4bed-8220-6444b0fdd0e4&tr=w-1100,c-at_max,f-auto",
+        "correctAnswer": "A",
+        "score": 200
+      }
+    ]
+  }

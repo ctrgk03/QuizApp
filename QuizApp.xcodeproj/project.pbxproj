@@ -7,20 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DCE98BE22B94AD410082FCBF /* StartingPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE98BDC2B94AD410082FCBF /* StartingPagePresenter.swift */; };
+		DCE98BE42B94AD410082FCBF /* StartingPageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE98BDE2B94AD410082FCBF /* StartingPageRouter.swift */; };
+		DCE98BE62B94AD410082FCBF /* StartingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE98BE02B94AD410082FCBF /* StartingPageViewController.swift */; };
+		DCE98BE72B94AD410082FCBF /* StartingPageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE98BE12B94AD410082FCBF /* StartingPageInteractor.swift */; };
+		DCE98BEA2B94C9680082FCBF /* StartingPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCE98BE92B94C9680082FCBF /* StartingPageViewController.xib */; };
+		DCE98BEC2B94F6600082FCBF /* GameFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE98BEB2B94F6600082FCBF /* GameFlowController.swift */; };
+		DCE98BEE2B94F7890082FCBF /* GameEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE98BED2B94F7890082FCBF /* GameEngine.swift */; };
+		DCE98BF22B94F8FA0082FCBF /* QuizAppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE98BF12B94F8FA0082FCBF /* QuizAppService.swift */; };
+		DCE98BF52B94F95C0082FCBF /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE98BF42B94F95C0082FCBF /* Questions.swift */; };
+		DCE98BFB2B9502780082FCBF /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = DCE98BF92B9502600082FCBF /* data.json */; };
+		DCE98BFE2B95030C0082FCBF /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE98BFD2B95030C0082FCBF /* UIViewController+Extensions.swift */; };
+		DCE98C012B95034D0082FCBF /* MBProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = DCE98C002B95034D0082FCBF /* MBProgressHUD */; };
 		DCE99EA52B94AA3F0091A041 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE99EA42B94AA3F0091A041 /* AppDelegate.swift */; };
-		DCE99EA72B94AA3F0091A041 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE99EA62B94AA3F0091A041 /* SceneDelegate.swift */; };
-		DCE99EA92B94AA3F0091A041 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE99EA82B94AA3F0091A041 /* ViewController.swift */; };
-		DCE99EAC2B94AA3F0091A041 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCE99EAA2B94AA3F0091A041 /* Main.storyboard */; };
 		DCE99EAE2B94AA400091A041 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCE99EAD2B94AA400091A041 /* Assets.xcassets */; };
 		DCE99EB12B94AA400091A041 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCE99EAF2B94AA400091A041 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DCE98BDC2B94AD410082FCBF /* StartingPagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingPagePresenter.swift; sourceTree = "<group>"; };
+		DCE98BDE2B94AD410082FCBF /* StartingPageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingPageRouter.swift; sourceTree = "<group>"; };
+		DCE98BE02B94AD410082FCBF /* StartingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingPageViewController.swift; sourceTree = "<group>"; };
+		DCE98BE12B94AD410082FCBF /* StartingPageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingPageInteractor.swift; sourceTree = "<group>"; };
+		DCE98BE92B94C9680082FCBF /* StartingPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartingPageViewController.xib; sourceTree = "<group>"; };
+		DCE98BEB2B94F6600082FCBF /* GameFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFlowController.swift; sourceTree = "<group>"; };
+		DCE98BED2B94F7890082FCBF /* GameEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEngine.swift; sourceTree = "<group>"; };
+		DCE98BF12B94F8FA0082FCBF /* QuizAppService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizAppService.swift; sourceTree = "<group>"; };
+		DCE98BF42B94F95C0082FCBF /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
+		DCE98BF92B9502600082FCBF /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		DCE98BFD2B95030C0082FCBF /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		DCE99EA12B94AA3F0091A041 /* QuizApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCE99EA42B94AA3F0091A041 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DCE99EA62B94AA3F0091A041 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DCE99EA82B94AA3F0091A041 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DCE99EAB2B94AA3F0091A041 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DCE99EAD2B94AA400091A041 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DCE99EB02B94AA400091A041 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DCE99EB22B94AA400091A041 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -31,12 +48,66 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCE98C012B95034D0082FCBF /* MBProgressHUD in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DCE98BE82B94AD450082FCBF /* StartingPage */ = {
+			isa = PBXGroup;
+			children = (
+				DCE98BDC2B94AD410082FCBF /* StartingPagePresenter.swift */,
+				DCE98BDE2B94AD410082FCBF /* StartingPageRouter.swift */,
+				DCE98BE02B94AD410082FCBF /* StartingPageViewController.swift */,
+				DCE98BE12B94AD410082FCBF /* StartingPageInteractor.swift */,
+				DCE98BE92B94C9680082FCBF /* StartingPageViewController.xib */,
+			);
+			path = StartingPage;
+			sourceTree = "<group>";
+		};
+		DCE98BEF2B94F7A30082FCBF /* GameEngine */ = {
+			isa = PBXGroup;
+			children = (
+				DCE98BEB2B94F6600082FCBF /* GameFlowController.swift */,
+				DCE98BED2B94F7890082FCBF /* GameEngine.swift */,
+			);
+			path = GameEngine;
+			sourceTree = "<group>";
+		};
+		DCE98BF02B94F8F00082FCBF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DCE98BF12B94F8FA0082FCBF /* QuizAppService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		DCE98BF32B94F9530082FCBF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DCE98BF42B94F95C0082FCBF /* Questions.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DCE98BF82B9502600082FCBF /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				DCE98BF92B9502600082FCBF /* data.json */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		DCE98BFC2B9502FD0082FCBF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DCE98BFD2B95030C0082FCBF /* UIViewController+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		DCE99E982B94AA3F0091A041 = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +127,26 @@
 		DCE99EA32B94AA3F0091A041 /* QuizApp */ = {
 			isa = PBXGroup;
 			children = (
+				DCE98BFC2B9502FD0082FCBF /* Extensions */,
+				DCE98BF82B9502600082FCBF /* Mocks */,
+				DCE98BF32B94F9530082FCBF /* Models */,
+				DCE98BF02B94F8F00082FCBF /* Services */,
+				DCE99EB82B94AAB00091A041 /* Features */,
 				DCE99EA42B94AA3F0091A041 /* AppDelegate.swift */,
-				DCE99EA62B94AA3F0091A041 /* SceneDelegate.swift */,
-				DCE99EA82B94AA3F0091A041 /* ViewController.swift */,
-				DCE99EAA2B94AA3F0091A041 /* Main.storyboard */,
 				DCE99EAD2B94AA400091A041 /* Assets.xcassets */,
 				DCE99EAF2B94AA400091A041 /* LaunchScreen.storyboard */,
 				DCE99EB22B94AA400091A041 /* Info.plist */,
 			);
 			path = QuizApp;
+			sourceTree = "<group>";
+		};
+		DCE99EB82B94AAB00091A041 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				DCE98BEF2B94F7A30082FCBF /* GameEngine */,
+				DCE98BE82B94AD450082FCBF /* StartingPage */,
+			);
+			path = Features;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +165,9 @@
 			dependencies = (
 			);
 			name = QuizApp;
+			packageProductDependencies = (
+				DCE98C002B95034D0082FCBF /* MBProgressHUD */,
+			);
 			productName = QuizApp;
 			productReference = DCE99EA12B94AA3F0091A041 /* QuizApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +196,9 @@
 				Base,
 			);
 			mainGroup = DCE99E982B94AA3F0091A041;
+			packageReferences = (
+				DCE98BFF2B95034D0082FCBF /* XCRemoteSwiftPackageReference "MBProgressHUD" */,
+			);
 			productRefGroup = DCE99EA22B94AA3F0091A041 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +215,8 @@
 			files = (
 				DCE99EB12B94AA400091A041 /* LaunchScreen.storyboard in Resources */,
 				DCE99EAE2B94AA400091A041 /* Assets.xcassets in Resources */,
-				DCE99EAC2B94AA3F0091A041 /* Main.storyboard in Resources */,
+				DCE98BEA2B94C9680082FCBF /* StartingPageViewController.xib in Resources */,
+				DCE98BFB2B9502780082FCBF /* data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +227,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCE99EA92B94AA3F0091A041 /* ViewController.swift in Sources */,
+				DCE98BEC2B94F6600082FCBF /* GameFlowController.swift in Sources */,
+				DCE98BE42B94AD410082FCBF /* StartingPageRouter.swift in Sources */,
+				DCE98BFE2B95030C0082FCBF /* UIViewController+Extensions.swift in Sources */,
 				DCE99EA52B94AA3F0091A041 /* AppDelegate.swift in Sources */,
-				DCE99EA72B94AA3F0091A041 /* SceneDelegate.swift in Sources */,
+				DCE98BF52B94F95C0082FCBF /* Questions.swift in Sources */,
+				DCE98BEE2B94F7890082FCBF /* GameEngine.swift in Sources */,
+				DCE98BE72B94AD410082FCBF /* StartingPageInteractor.swift in Sources */,
+				DCE98BE22B94AD410082FCBF /* StartingPagePresenter.swift in Sources */,
+				DCE98BF22B94F8FA0082FCBF /* QuizAppService.swift in Sources */,
+				DCE98BE62B94AD410082FCBF /* StartingPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DCE99EAA2B94AA3F0091A041 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DCE99EAB2B94AA3F0091A041 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DCE99EAF2B94AA400091A041 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -216,7 +304,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +358,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -291,7 +379,6 @@
 				INFOPLIST_FILE = QuizApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -322,7 +409,6 @@
 				INFOPLIST_FILE = QuizApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -364,6 +450,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DCE98BFF2B95034D0082FCBF /* XCRemoteSwiftPackageReference "MBProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jdg/MBProgressHUD.git";
+			requirement = {
+				kind = exactVersion;
+				version = 1.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DCE98C002B95034D0082FCBF /* MBProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCE98BFF2B95034D0082FCBF /* XCRemoteSwiftPackageReference "MBProgressHUD" */;
+			productName = MBProgressHUD;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DCE99E992B94AA3F0091A041 /* Project object */;
 }

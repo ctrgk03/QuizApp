@@ -1,14 +1,23 @@
 import UIKit
 import Reusable
 
-protocol QuestionDisplayLogic: AnyObject {
-    //func display(viewModel: Question.Something.ViewModel)
+protocol QuestionViewControllerDelegate: AnyObject {
+    func questionAnswered()
 }
 
-final class QuestionViewController: UIViewController, QuestionDisplayLogic, Reusable {
+protocol QuestionDisplayLogic: AnyObject {
+    func displayQuestion(_ viewModel: QuestionPage.PrepareQuestion.ViewModel)
+    func disaplayAnsweredQuestion(_ viewModel: QuestionPage.AnswerQuestion.ViewModel)
+}
+
+final class QuestionViewController: UIViewController, Reusable {
     @IBOutlet private weak var tableView: UITableView!
     var interactor: QuestionBusinessLogic?
     var router: (NSObjectProtocol & QuestionRoutingLogic & QuestionDataPassing)?
+    weak var delegate: QuestionViewControllerDelegate?
+
+    private var headerModel: QuestionHeaderViewModel?
+    private var answers: [AnswerCellModel] = []
 
     init() {
         super.init(nibName: QuestionViewController.reuseIdentifier, bundle: .main)
@@ -36,39 +45,67 @@ final class QuestionViewController: UIViewController, QuestionDisplayLogic, Reus
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        setupNavigation()
-    }
-
-    func displaySomething(viewModel: QuestionPage.PrepareQuestion.ViewModel) {
-        //nameTextField.text = viewModel.name
-    }
-
-    // prepare navigation veya prepare Data sonunda dönen viewmodel'ın ardından çağırılabilir
-    private func setupNavigation() {
-        navigationItem.titleView = NavBarTitleView()
+        interactor?.prepareQuestion()
     }
 
     private func setupTableView() {
         tableView.register(cellType: AnswerCell.self)
     }
+
+    private func setupNavigation(_ model: NavBarTitleViewModel) {
+        let titleView = NavBarTitleView()
+        titleView.configure(model)
+        navigationItem.titleView = titleView
+    }
+
+    private func routeToNextQuestion() {
+        tableView.isUserInteractionEnabled = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.delegate?.questionAnswered()
+        }
+    }
+}
+
+extension QuestionViewController: QuestionDisplayLogic {
+    func disaplayAnsweredQuestion(_ viewModel: QuestionPage.AnswerQuestion.ViewModel) {
+        setupNavigation(viewModel.navigationBarTitleModel)
+        answers = viewModel.answers
+        let rowsToReload = (0..<answers.count).map { IndexPath(row: $0, section: 0) }
+        tableView.reloadRows(at: rowsToReload, with: .automatic)
+        routeToNextQuestion()
+    }
+
+    func displayQuestion(_ viewModel: QuestionPage.PrepareQuestion.ViewModel) {
+        setupNavigation(viewModel.navigationBarTitleModel)
+        headerModel = viewModel.headerModel
+        answers = viewModel.answers
+        tableView.reloadData()
+    }
 }
 
 extension QuestionViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        4
+        answers.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        tableView.dequeueReusableCell(for: indexPath, cellType: AnswerCell.self)
+        let cell = tableView.dequeueReusableCell(for: indexPath, cellType: AnswerCell.self)
+        let model = answers[indexPath.row]
+        cell.configure(model)
+        return cell
     }
 }
 
 extension QuestionViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath)
+        let answer = answers[indexPath.row]
+        interactor?.answerQuestion(answer: answer.answer)
     }
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        QuestionHeaderView()
+        guard let headerModel else { return nil }
+        let header = QuestionHeaderView()
+        header.configure(headerModel)
+        return header
     }
 }

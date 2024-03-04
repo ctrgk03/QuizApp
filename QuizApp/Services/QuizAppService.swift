@@ -1,5 +1,7 @@
 import Foundation
+import Factory
 
+private let unexpectedErrorMessage = "Beklenmeyen bir hata meydana geldi!"
 typealias QuizAppServiceResult = Result<QuestionsResponse, QuizAppServiceError>
 typealias QuizAppServiceCompletion = (QuizAppServiceResult) -> Void
 
@@ -11,7 +13,7 @@ protocol QuizAppService {
     func fetchQuestions(completion: @escaping QuizAppServiceCompletion)
 }
 
-final class MockQuizAppService: QuizAppService {
+struct MockQuizAppService: QuizAppService {
     func fetchQuestions(completion: @escaping QuizAppServiceCompletion) {
         completion(successResult())
     }
@@ -27,14 +29,22 @@ final class MockQuizAppService: QuizAppService {
     }
 
     private func failingResult() -> QuizAppServiceResult {
-        .failure(QuizAppServiceError(message: "Beklenmeyen bir hata meydana geldi!"))
+        .failure(QuizAppServiceError(message: unexpectedErrorMessage))
     }
 }
 
-final class RemoteQuizAppService: QuizAppService {
-    // private let network
+struct RemoteQuizAppService: QuizAppService {
+    private let networkClient = Container.shared.networkClient()
 
     func fetchQuestions(completion: @escaping QuizAppServiceCompletion) {
-
+        Task { @MainActor in
+            let url = URL(string: "http://demo3633203.mockable.io/hbquiz")!
+            do {
+                let response = try await networkClient.fetch(type: QuestionsResponse.self, with: URLRequest(url: url))
+                completion(.success(response))
+            } catch {
+                completion(.failure(.init(message: unexpectedErrorMessage)))
+            }
+        }
     }
 }

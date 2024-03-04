@@ -1,10 +1,18 @@
 import UIKit
 
-protocol StartingPageDisplayLogic: AnyObject {}
+protocol StartingPageViewControllerDelegate: AnyObject {
+    func startButtonTapped()
+}
+
+protocol StartingPageDisplayLogic: AnyObject {
+    func displayHighScore(_ viewModel: StartingPage.PrepareHighScore.ViewModel)
+}
 
 final class StartingPageViewController: UIViewController, StartingPageDisplayLogic {
+    @IBOutlet private weak var highScoreLabel: UILabel!
     var interactor: StartingPageBusinessLogic?
     var router: (StartingPageRoutingLogic & StartingPageDataPassing)?
+    weak var delegate: StartingPageViewControllerDelegate?
 
     init() {
         super.init(nibName: "StartingPageViewController", bundle: .main)
@@ -32,9 +40,14 @@ final class StartingPageViewController: UIViewController, StartingPageDisplayLog
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Quiz App"
+        interactor?.prepareHighScore()
     }
 
     @IBAction func tappedStartButton(_ sender: Any) {
-        router?.startQuiz()
+        delegate?.startButtonTapped()
+    }
+
+    func displayHighScore(_ viewModel: StartingPage.PrepareHighScore.ViewModel) {
+        highScoreLabel.text = viewModel.highScoreText
     }
 }

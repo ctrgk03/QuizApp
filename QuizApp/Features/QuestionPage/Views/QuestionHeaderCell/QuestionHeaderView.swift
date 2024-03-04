@@ -2,6 +2,12 @@ import UIKit
 import Reusable
 import Kingfisher
 
+struct QuestionHeaderViewModel {
+    let scoreOfQuestionText: String
+    let questionImageURL: URL?
+    let questionText: String
+}
+
 final class QuestionHeaderView: UIView, NibOwnerLoadable {
 
     @IBOutlet private weak var scoreOfQuestionLabel: UILabel!
@@ -20,8 +26,18 @@ final class QuestionHeaderView: UIView, NibOwnerLoadable {
 
     private func commonInit() {
         loadNibContent()
+    }
+
+    func configure(_ model: QuestionHeaderViewModel) {
+        scoreOfQuestionLabel.text = model.scoreOfQuestionText
+        questionLabel.text = model.questionText
+        guard let url = model.questionImageURL else {
+            imageView.isHidden = true
+            return
+        }
+        print(url)
         imageView.kf.setImage(
-            with: URL(string: ""),
+            with: url,
             placeholder: UIImage(systemName: "photo")
         )
     }

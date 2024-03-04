@@ -2,7 +2,7 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    static var flowController: GameFlowController!
+    private var flowController: GameFlowController!
     private let navigationController = UINavigationController()
     var window: UIWindow?
 
@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func startFlowController() {
-        AppDelegate.flowController = .init(navigationController: navigationController)
-        AppDelegate.flowController.start()
+        flowController = .init(navigationController: navigationController)
+        flowController.routeToStartingPage()
     }
 }

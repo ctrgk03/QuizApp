@@ -1,11 +1,10 @@
 import UIKit
 
 protocol QuestionRoutingLogic {
-    //func routeToSomewhere(segue: UIStoryboardSegue?)
 }
 
 protocol QuestionDataPassing: NSObject {
-    var dataStore: QuestionDataStore? { get }
+    var dataStore: QuestionDataStore? { get set }
 }
 
 final class QuestionRouter: NSObject, QuestionRoutingLogic, QuestionDataPassing {

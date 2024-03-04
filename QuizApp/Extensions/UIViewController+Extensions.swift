@@ -10,6 +10,17 @@ extension UIViewController {
         }
     }
 
+    func showEndGameAlert(handler: @escaping () -> Void) {
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: "Oyun Bitti!", message: nil, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Tamam", style: .default, handler: { _ in
+                handler()
+            }))
+            self.present(alert, animated: true, completion: nil)
+        }
+
+    }
+
     func showProgress() {
         DispatchQueue.main.async {
             let hud = MBProgressHUD.showAdded(to: self.view, animated: true)

@@ -1,8 +1,8 @@
 struct QuestionsResponse: Decodable {
-    let questions: [Question]
+    let questions: [QuestionResponse]
 }
 
-struct Question: Codable {
+struct QuestionResponse: Codable {
     let question: String
     let answers: [String: String]
     let questionImageURL: String?

@@ -1,6 +1,10 @@
 import UIKit
 import Reusable
 
+struct NavBarTitleViewModel {
+    let questionIndexText: String
+    let totalScoreText: String
+}
 final class NavBarTitleView: UIView, NibOwnerLoadable {
 
     @IBOutlet private weak var questionIdxLabel: UILabel!
@@ -20,8 +24,8 @@ final class NavBarTitleView: UIView, NibOwnerLoadable {
         loadNibContent()
     }
 
-    func configure(questionIdxText: String, totalScoreText: String) {
-        questionIdxLabel.text = questionIdxText
-        totalScoreLabel.text = totalScoreText
+    func configure(_ model: NavBarTitleViewModel) {
+        questionIdxLabel.text = model.questionIndexText
+        totalScoreLabel.text = model.totalScoreText
     }
 }
